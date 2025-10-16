@@ -1,0 +1,12 @@
+import random
+letters = 'abcdefghijklmnopqrstuvwxyz'
+nums_input = input()
+if nums_input == 'да':
+    letters += '0123456789'
+syms_input = input()
+if syms_input == 'да':
+    letters += '*$@(!'
+result = ''
+for i in range(8):
+    result += random.choice(letters)
+print('Ваш случайный пароль:', result)
