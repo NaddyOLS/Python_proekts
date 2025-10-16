@@ -1,0 +1,11 @@
+import random
+user_num1 =int(input())
+user_num2 =int(input())
+random_num1 =random.randint(1,5)
+random_num2 =random.randint(1,5)
+if user_num1 == random_num1 or user_num1 == random_num2 or user_num2 == random_num1 or user_num2 == random_num2:
+    print("Вай-ма, вы великий экстрасенс!")
+else:
+    print("Вы знаете, что магов на Руси сжигали заживо?")
+    print("Хорошо, что вы сегодня не маг")
+print(f"Были загаданы числа: {random_num1} и {random_num2}")
