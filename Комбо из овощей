@@ -1,0 +1,23 @@
+import random
+my_vegetables = []
+spisok1=["огурец","помидор"]
+spisok2=["перец","лук"]
+spisok3=["помидор","перец"]
+for i in range(6):
+    print(f"Наш текущий набор: {my_vegetables}")
+    nomer=int(input())
+    if nomer == 1:
+        kolith=random.choice(spisok1)
+        my_vegetables.append(kolith)
+    elif nomer == 2:
+        kolith=random.choice(spisok2)
+        my_vegetables.append(kolith)
+    elif nomer == 3:
+        kolith=random.choice(spisok3)
+        my_vegetables.append(kolith)
+    print(f"Вы получили: {kolith}")
+print(f"Мы собрали: {my_vegetables}")
+if my_vegetables.count("огурец") == 3 and my_vegetables.count("помидор") == 1 or my_vegetables.count("огурец") == 1 and my_vegetables.count("перец") == 1 and my_vegetables.count("помидор") == 1 and my_vegetables.count("лук") == 1 or my_vegetables.count("помидор") == 2 and my_vegetables.count("перец") == 2:
+    print("О великий игрок, вы повелитель овощей!")
+else:
+    print("Увы, вам не повезло!")
