@@ -1,0 +1,13 @@
+import random
+words = ['пинг', 'лом', 'лягушка', 'пицца',
+         'бобр', 'чебурек', 'лук', 'чеснок' ]
+slovko=random.choice(words)
+slovko1=list(slovko)
+random.shuffle(slovko1)
+print(f"Перемешанное слово: {slovko1}")
+varik=input()
+if varik == slovko:
+    print("О великий игрок, вы настоящий эрудит!")
+else:
+    print("О великий игрок, вы тютють ошиблись...")
+    print(f"Слово было: {slovko}")
