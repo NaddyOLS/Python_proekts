@@ -1,0 +1,10 @@
+import random
+variants=['камень', 'ножницы', 'бумага']
+selection_pc=random.choice(variants)
+polz=input()
+if selection_pc == "камень" and polz == "ножницы" or selection_pc == "ножницы" and polz == "бумага" or selection_pc == "бумага" and polz == "камень":
+    print("Великий игрок благородно позволил выиграть компьютеру!")
+if selection_pc == "ножницы" and polz == "камень" or selection_pc == "бумага" and polz == "ножницы" or selection_pc == "камень" and polz == "бумага":
+    print("Великий игрок одержал великую победу!")
+if selection_pc == "камень" and polz == "камень" or selection_pc == "бумага" and polz == "бумага" or selection_pc == "ножницы" and polz == "ножницы":
+    print("Великий игрок милосердно заключил ничью!")
