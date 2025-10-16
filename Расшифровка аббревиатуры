@@ -1,0 +1,21 @@
+import random
+
+letters = 'АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЫЭЮЯ'
+acronym = ''
+
+for i in range(3):
+    letter = random.choice(letters)
+    acronym += letter
+
+print(acronym)
+
+user_letters = ''
+
+for i in range(3):
+    word = input()
+    user_letters += word[0]
+
+if user_letters.upper() == acronym:
+    print('О великий игрок! Это знал 1% россиян!')
+else:
+    print('ДВО - даже великие ошибаются')
