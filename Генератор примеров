@@ -1,0 +1,15 @@
+import random
+kolitch=0
+vvod=int(input())
+for i in range(vvod):
+    x=random.randint(1,15)
+    y=random.randint(10,25)
+    print(f"{x} + {y} =")
+    igrok=int(input())
+    if x + y == igrok:
+        kolitch+=1
+        print("О великий игрок, ты ещё и математик!")
+    else:
+        print("О великий игрок, ты был отрицательно прав!")
+        print(f"Ответ был: {x+y}")
+print(f"Великий игрок ответил правильно раз: {kolitch}")
