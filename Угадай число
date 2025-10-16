@@ -1,0 +1,15 @@
+import random
+number_guesses = 0
+for i in range(3):
+    varik = int(input())
+    ygadat = random.randint(1, 3)
+    if varik == ygadat:
+        number_guesses= number_guesses + 1
+        print("Вау, вы настоящий волшебник!")
+    else:
+        print("Увы, в этот раз не повезло!")
+print("Количество отгадок:", number_guesses)
+if number_guesses >= 2:
+    print("Вау, вы сегодня были в ударе!")
+else:
+    print("Неплохой результат, но можно лучше!")
