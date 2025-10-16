@@ -1,0 +1,12 @@
+import random
+stroka="kc"
+result=""
+for i in range(9):
+    result += random.choice(stroka)
+kkk=result.count("k")
+ccc=result.count("c")
+polz=input()
+if polz == "k" and kkk>ccc or polz =="c" and ccc > kkk:
+    print("О, великий игрок, вы, как всегда, безупречны!")
+elif polz == "k" and kkk<ccc or polz=="c" and ccc<kkk:
+    print("Даже гении иногда ошибаются...")
