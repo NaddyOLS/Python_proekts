@@ -1,0 +1,18 @@
+import random
+x=random.randint(3,6)
+y=random.randint(10,14)
+z=random.randint(18,22)
+e=random.randint(3,7)
+print(f"{x} + {y} ? {z} - {e}")
+if x + y > z - e:
+    prav_otv=">"
+elif x + y < z - e:
+    prav_otv="<"
+else:
+    prav_otv="=="
+polz=input()
+if polz == prav_otv:
+    print("О великий игрок, ты == идеалу!")
+else:
+    print("О великий игрок, ты был отрицательно прав!")
+    print(f"Ответ был: {prav_otv}")
