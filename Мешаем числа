@@ -1,0 +1,12 @@
+import random
+nums = [105, 195, 48]
+print(nums)
+random.shuffle(nums)
+polz1=int(input())
+polz2=int(input())
+polz3=int(input())
+if nums.index(polz1) == 0 and nums.index(polz2) == 1 and nums.index(polz3) == 2:
+    print("О великий игрок! Вы подчинили рандом!")
+else:
+    print("Увы и ах, числа перемешались по-другому.")
+    print(f"Их порядок был: {nums}")
