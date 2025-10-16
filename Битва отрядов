@@ -1,0 +1,43 @@
+spisok=[]
+voins=40
+for i in range(5):
+    print(f"Формируется {i+1} отряд")
+    vvod=int(input())
+    voins-=vvod
+    print(f"В {i+1} отряд добавлено {vvod} воинов")
+    print(f"Осталось распределить воинов: {voins}")
+    spisok.append(vvod)
+if voins == 0:
+    print(f"Ваши отряды: {spisok}")
+else:
+    print("Ошибка, воины распределены неверно.")
+    print("Попробуйте сыграть заново.")
+    exit()
+import random
+voins=40
+spisok1=[]
+for i in range(4):
+    kolitch=random.randint(0,voins)
+    voins -=kolitch
+    spisok1.append(kolitch)
+spisok1.append(voins)
+print(f"Отряды компа: {spisok1}")
+polz=0
+komp=0
+for i in range(len(spisok)):
+    if spisok[i] > spisok1[i]:
+        polz +=1
+        print("Отряд игрока выиграл!")
+    elif spisok[i] < spisok1[i]:
+        komp +=1
+        print("Отряд компа выиграл!")
+    else:
+        print("Боевая ничья!")
+print(f"Игрок выиграл раз: {polz}")
+print(f"Компьютер выиграл раз: {komp}")
+if polz > komp:
+    print("Победу в игре одержал игрок!")
+elif polz < komp:
+    print("Победу в игре одержал компьютер!")
+else:
+    print("Великая игра закончилась ничьей!")
