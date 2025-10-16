@@ -1,0 +1,20 @@
+import random
+numbers = []
+numbers1 = []
+even_count = 0
+odd_count = 0
+for i in range(7):
+    nums=random.randint(-10,10)
+    if nums < 0:
+        even_count +=1
+        numbers.append(nums)
+    elif nums > 0:
+        odd_count +=1
+        numbers1.append(nums)
+polz=input()
+if even_count >odd_count and polz == "отрицательных" or odd_count >even_count and polz == "положительных" or even_count == odd_count and polz == "одинаково":
+    print("О великий игрок, ты оказался прав!")
+elif even_count < odd_count and polz == "отрицательных" or odd_count < even_count and polz == "положительных" or even_count != odd_count and polz == "одинаково":
+    print("О великий игрок, ты был отрицательно прав!")
+print(f"Положительных чисел было: {len(numbers1)}")
+print(f"Отрицательных чисел было: {len(numbers)}")
